@@ -8,6 +8,7 @@ const { reg_login_schema } = require('../schema/user')
 
 const router = express.Router()
 
+// expressJoi局部中间件用于验证表单数据的格式
 router.post('/reguser', expressJoi(reg_login_schema), user_handler.regUser)
 router.post('/login', expressJoi(reg_login_schema), user_handler.login)
 
